@@ -3,7 +3,36 @@ This File Contains The Urls Scrapped From The Url Provided By The User
 https://oceanofanythingofficial.github.io
 https://github.com/oceanofanythingofficial
 https://oceanofanythingg.blogspot.com
-Date Of Last Scan: 2022-01-02 18:07:57.030178
-Time Of Last Scan: 18:07:57
-Scrapped Urls:
-http://1
+Date Of Last Scan: 2022-06-09 15:14:08.661149
+Time Of Last Scan: 15:14:08
+Scrapped Urls: 
+https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=http://www.google.com/&ec=GAZAAQ
+http://google.com/intl/en/about.html
+https://news.google.com/?tab=in
+http://www.youtube.com/?gl=SG&tab=w1
+https://drive.google.com/?tab=io
+http://google.com/preferences?hl=en
+http://www.google.com.sg/imghp?hl=en&tab=wi
+http://www.google.com.sg/intl/en/services/
+http://www.youtube.com/?gl=SG&tab=i1
+http://www.google.com/setprefs?sig=0_LsVy0vpAvZo3dfcTZ6c5LzeVa4Q%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwif5uuv1KD4AhWzZWwGHbQkDYYQ2ZgBCAc
+https://www.google.com.sg/intl/en/about/products?tab=ih
+https://mail.google.com/mail/?tab=im
+http://www.google.com/setprefs?sig=0_LsVy0vpAvZo3dfcTZ6c5LzeVa4Q%3D&hl=ms&source=homepage&sa=X&ved=0ahUKEwif5uuv1KD4AhWzZWwGHbQkDYYQ2ZgBCAY
+https://drive.google.com/?tab=wo
+http://google.com/advanced_search?hl=en-SG&authuser=0
+https://mail.google.com/mail/?tab=wm
+http://maps.google.com.sg/maps?hl=en&tab=wl
+http://google.com/intl/en/policies/privacy/
+https://www.google.com.sg/webhp?tab=iw
+http://www.google.com/setprefdomain?prefdom=SG&prev=http://www.google.com.sg/&sig=K_x5WxucZPrNGpxulTvwtB5JmwUeQ%3D
+https://www.google.com.sg/intl/en/about/products?tab=wh
+http://maps.google.com.sg/maps?hl=en&tab=il
+http://google.com/intl/en/policies/terms/
+https://news.google.com/?tab=wn
+https://play.google.com/?hl=en&tab=i8
+http://google.com/intl/en/ads/
+http://www.google.com.sg/history/optout?hl=en
+http://www.google.com/setprefs?sig=0_LsVy0vpAvZo3dfcTZ6c5LzeVa4Q%3D&hl=zh-CN&source=homepage&sa=X&ved=0ahUKEwif5uuv1KD4AhWzZWwGHbQkDYYQ2ZgBCAU
+http://google.com
+https://play.google.com/?hl=en&tab=w8

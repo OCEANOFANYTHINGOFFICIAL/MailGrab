@@ -3,7 +3,33 @@ This File Contains The Emails Scrapped From The Url Provided By The User
 https://oceanofanythingofficial.github.io
 https://github.com/oceanofanythingofficial
 https://oceanofanythingg.blogspot.com
-Date Of Last Scan: 2022-01-02 18:07:57.030178
-Time Of Last Scan: 18:07:57
+Date Of Last Scan: 2022-06-09 15:14:08.661149
+Time Of Last Scan: 15:14:08
 Scrapped Emails:
-
+ 
+game@bravestars.com
+elfland_support@greenwoodgame.com
+support@robtopgames.com
+help.lordsmobile.android@igg.com
+seamerge.game@gmail.com
+oos-support@superplusgames.com
+township@playrix.com
+support@pg3d.zendesk.com
+support@filgames.com
+community@idleminertycoon.com
+arena.support@plarium.com
+inappsupport-googleplay@crossyroad.com
+fruitninja@halfbrick.com
+support@platinumplayerllc.com
+NicoVProductions@gmail.com
+dreamislandoffical@gmail.com
+robert@broofa.com
+support@dailyinnovation.biz
+support@fingersoft.com
+sosgame@kingsgroupgames.com
+homescapes@playrix.com
+fishdom@playrix.com
+yangxue1@fotoable.com
+contactus@bitmango.com
+mergeelves@gmail.com
+tastydiaryteam@hotmail.com
