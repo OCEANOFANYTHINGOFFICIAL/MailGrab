@@ -14,7 +14,7 @@ git clone https://github.com/oceanofanythingofficial/MailGrab
 cd MailGrab
 ```
 ##### Install **Python 3.9** In Your Pc And Do The Followings
-##### InstallPython 3.9
+##### Install Python 3.9
 Go And Visit The Official Page Of Python. Then Install Python On Your System. Make Sure To Install Python Version 3.9.0.  To Prevent Any ~~Mistake~~ Please Use Link Bellow
 You Can Also Install From This [Link](https://www.python.org/downloads/release/python-390/)
 ##### For Linux Or Ubuntu
