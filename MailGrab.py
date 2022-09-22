@@ -30,7 +30,7 @@ if __name__ == "__main__":
             exit()
     elif os.name == 'posix':
         if os.system("curl -s oceanofanythingofficial.github.io > /dev/null") == 0:
-            print("Internet Connected")
+            pass
         else:
             print("Internet Not Connected")
             exit()
