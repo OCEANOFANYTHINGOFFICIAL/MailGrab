@@ -1,11 +1,13 @@
 # MailGrab
 #### A Powerful Email Harvester Tool By OCEAN OF ANYTHING
 **Just Provide Urls, And It Will Harvest Emails From Those Urls. Not Only One Url , It Will Automatically Find _SubUrls_ From Given Url. It Can Also Find Emails From Thousands Of Urls At One Time. Dont Have Time To Copy All Emails? No Worry! It Will Save All Emails And Harvested Urls In Saperate Text Files. Emails Will Be Saved In *`_emails.txt`*  And Scrapped Urls Will Be Saved In *`_scrappedUrls.txt`*. You Can Provide A Huge List Of Urls To Be Scanned**
-## Requirements
 
- 1. Python 3.9
- 2. Pip 3
- 3. requirements.txt
+## requirements 
+
+ - Python 3.9 (keep Scrawling To See Installation Tutorial)
+ - Windows/Linux/Mac
+ - Pip3
+ - Internet Connection (Obviously😜)
 
 ## Installation
 Clone The Repo From Official Page Of **OCEAN OF ANYTHING** And Change Directory To MailGrab
@@ -13,8 +15,36 @@ Clone The Repo From Official Page Of **OCEAN OF ANYTHING** And Change Directory 
 git clone https://github.com/oceanofanythingofficial/MailGrab
 cd MailGrab
 ```
-##### Install **Python 3.9** In Your Pc And Do The Followings
-##### Install Python 3.9
+###  Windows 
+
+Just Run The `install.bat` File And Wait For The Installation To Complete.
+
+```shell
+install.bat
+```
+or
+```shell
+python -u install.py
+```
+
+###  Linux
+  
+Its Just Simple As That 😎. Just Run The Following Command And Wait For The Installation To Complete🙂.
+
+
+```shell
+sudo python -u install.py
+```
+
+> ProTip! It's Necessary To Run Tis In Root Or Sudo
+
+### Mac
+
+
+
+##### Install Python 3.9 (For Kids Who Dont Know How To Install Python 3.9)
+
+```shell
 Go And Visit The Official Page Of Python. Then Install Python On Your System. Make Sure To Install Python Version 3.9.0.  To Prevent Any ~~Mistake~~ Please Use Link Bellow
 You Can Also Install From This [Link](https://www.python.org/downloads/release/python-390/)
 ##### For Linux Or Ubuntu

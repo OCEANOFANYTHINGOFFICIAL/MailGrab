@@ -22,6 +22,24 @@ import warnings
 import logging
 
 if __name__ == "__main__":
+    if os.name in ("nt", "dos", "ce"):
+        if os.system("ping -n 1 oceanofanythingofficial.github.io > nul") == 0:
+            pass
+        else:
+            print("Internet Not Connected")
+            exit()
+    elif os.name == 'posix':
+        if os.system("curl -s oceanofanythingofficial.github.io > /dev/null") == 0:
+            print("Internet Connected")
+        else:
+            print("Internet Not Connected")
+            exit()
+    elif os.name == 'darwin':
+        if os.system("curl -s oceanofanythingofficial.github.io > /dev/null") == 0:
+            pass
+        else:
+            print("Internet Not Connected")
+            exit()
     """
     Name - MailGrab
     Description - Email Harvester Tool
@@ -38,7 +56,8 @@ if __name__ == "__main__":
     date = datetime.datetime.now()
     time1 = date.strftime("%H:%M:%S")
     log.info("Starting MailGrab")
-    log.info("Srapped Url List By MailGrab A Powerful Email Scraper Tool Made By OCEAN OF ANYTHING")
+    log.info(
+        "Srapped Url List By MailGrab A Powerful Email Scraper Tool Made By OCEAN OF ANYTHING")
     log.info("This File Contains The Urls Scrapped From The Url Provided By The User")
     log.info("https://oceanofanythingofficial.github.io")
     log.info("https://github.com/oceanofanythingofficial")
@@ -72,7 +91,6 @@ if __name__ == "__main__":
     sInput.stylize("bold #00ff00")
     log.info("Input Sign: [?]")
 
-
     # initializing rich console and coloroma
     console = Console(record=True)
     c.init(autoreset=True)
@@ -89,7 +107,8 @@ if __name__ == "__main__":
         log.error("Program Closing No Internet Connection")
         console.print(sDanger + " You Are Not Connected To The Internet")
         log.error("You Are Not Connected To The Internet")
-        console.print(sInfo + " Please Connect To The Internet To Continue Using This Program")
+        console.print(
+            sInfo + " Please Connect To The Internet To Continue Using This Program")
         log.info("Please Connect To The Internet To Continue Using This Program")
         console.print(sInfo + " Press Enter To Exit", end="")
         input('')
@@ -115,50 +134,63 @@ if __name__ == "__main__":
         pass
     # Functions And Classes
     # Banner
+
     class BANNER:
         def __init__(self):
             console.print(
                 Text(" _______  _______ _________ _        ", "bold green"), end=""
             )
-            console.print(Text("                                 ", "bold red"), end="\n")
+            console.print(
+                Text("                                 ", "bold red"), end="\n")
             console.print(
                 Text("(       )(  ___  )\__   __/( \       ", "bold green"), end=""
             )
-            console.print(Text("                                 ", "bold red"), end="\n")
+            console.print(
+                Text("                                 ", "bold red"), end="\n")
             console.print(
                 Text("| () () || (   ) |   ) (   | (       ", "bold green"), end=""
             )
-            console.print(Text("                                 ", "bold red"), end="\n")
+            console.print(
+                Text("                                 ", "bold red"), end="\n")
             console.print(
                 Text("| || || || (___) |   | |   | |       ", "bold green"), end=""
             )
-            console.print(Text("  ________            ___.       ", "bold red"), end="\n")
+            console.print(
+                Text("  ________            ___.       ", "bold red"), end="\n")
             console.print(
                 Text("| |(_)| ||  ___  |   | |   | |       ", "bold green"), end=""
             )
-            console.print(Text(" /  _____/___________ \_ |__     ", "bold red"), end="\n")
+            console.print(
+                Text(" /  _____/___________ \_ |__     ", "bold red"), end="\n")
             console.print(
                 Text("| |   | || (   ) |   | |   | |       ", "bold green"), end=""
             )
-            console.print(Text("/   \  __\_  __ \__  \ | __ \    ", "bold red"), end="\n")
+            console.print(
+                Text("/   \  __\_  __ \__  \ | __ \    ", "bold red"), end="\n")
             console.print(
                 Text("| )   ( || )   ( |___) (___| (____/\ ", "bold green"), end=""
             )
-            console.print(Text("\    \_\  \  | \// __ \| \_\ \   ", "bold red"), end="\n")
+            console.print(
+                Text("\    \_\  \  | \// __ \| \_\ \   ", "bold red"), end="\n")
             console.print(
                 Text("|/     \||/     \|\_______/(_______/ ", "bold green"), end=""
             )
-            console.print(Text(" \______  /__|  (____  /___  /   ", "bold red"), end="\n")
+            console.print(
+                Text(" \______  /__|  (____  /___  /   ", "bold red"), end="\n")
             console.print(
                 Text("                                     ", "bold green"), end=""
             )
-            console.print(Text("        \/           \/    \/    ", "bold red"), end="\n")
+            console.print(
+                Text("        \/           \/    \/    ", "bold red"), end="\n")
             console.print(Text("Mail", "bold Green"), end="")
             console.print(Text("Grab", "bold red"), end="")
-            console.print(Text(" A Powerful Email Harvester Tool", "bold blue"), end="")
-            console.print(Text(" By OCEAN OF ANYTHING", "bold yellow"), end="\n")
+            console.print(
+                Text(" A Powerful Email Harvester Tool", "bold blue"), end="")
+            console.print(Text(" By OCEAN OF ANYTHING",
+                          "bold yellow"), end="\n")
             console.print(Text("", "bold red"))
             console.print(Text("", "bold red"))
+
     def ordered_set(in_list):
         out_list = []
         added = set()
@@ -170,6 +202,7 @@ if __name__ == "__main__":
     # coloring block
     block = colored("█", "green")
     # Progress Bar
+
     def progressBar(
         iterable, prefix="", suffix="", decimals=1, length=100, fill=block, printEnd="\r"
     ):
@@ -187,6 +220,7 @@ if __name__ == "__main__":
         cursor.hide()
         total = len(iterable)
         # Progress Bar Printing Function
+
         def printProgressBar(iteration):
             percent = ("{0:." + str(decimals) + "f}").format(
                 100 * (iteration / float(total))
@@ -196,7 +230,8 @@ if __name__ == "__main__":
             bar = fill * filledLength + hStick * (length - filledLength)
             bar2 = Text(bar, style="bold, green")
             stick = colored("|", "green")
-            print(f"\r{prefix} {stick}{bar2}{stick} {percent}% {suffix}", end=printEnd)
+            print(
+                f"\r{prefix} {stick}{bar2}{stick} {percent}% {suffix}", end=printEnd)
 
         # Initial Call
         printProgressBar(0)
@@ -209,7 +244,7 @@ if __name__ == "__main__":
         cursor.show()
 
     def MAILGRAB():
-        if 1<2:
+        if 1 < 2:
             # Now Check If The _inputUrls.txt File Is Empty Or Not. If Empty Then Pass The Program
             # if exists _inputUrls.txt file then open it
             f = open("_inputUrls.txt", "r")
@@ -246,7 +281,8 @@ if __name__ == "__main__":
                 urlListFromTxtFile.remove("")
             else:
                 pass
-            urlListFromTxtFile = [x.strip() for x in urlListFromTxtFile if x.strip()]
+            urlListFromTxtFile = [x.strip()
+                                  for x in urlListFromTxtFile if x.strip()]
             urlListFromTxtFile = ordered_set(urlListFromTxtFile)
             # Now Printing The Banner
             try:
@@ -258,7 +294,8 @@ if __name__ == "__main__":
                 log.info("Error While Printing The Banner")
             # Now Take Each Url From The List And Harvest The Email From The Url and The url's subdomains
             # Taking Input From The User For The Depth Of The Search
-            console.print(sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
+            console.print(
+                sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
             depthInput = input()
             log.info("User Inputted Depth")
             startTimeg = time.time()
@@ -268,7 +305,8 @@ if __name__ == "__main__":
                     if type(depthInput) == float:
                         console.print(sWarning + " Input Cannot Be A Float!")
                         log.warn("User Entered Invalid Depth")
-                        console.print(sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
+                        console.print(
+                            sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
                         depthInput = input()
                         log.info("User Inputted Depth")
                     else:
@@ -282,27 +320,32 @@ if __name__ == "__main__":
                     elif not depthInput.isdigit():
                         console.print(sWarning + " Input Must Be A Number!")
                         log.warn("User Entered Invalid Depth")
-                        console.print(sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
+                        console.print(
+                            sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
                         depthInput = input()
                         log.info("User Inputted Depth")
                     # checking the input is digit or not, else continuing while loop
                     else:
                         console.print(sWarning + " Input Must Be A Number!")
                         log.warn("User Entered Invalid Depth")
-                        console.print(sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
+                        console.print(
+                            sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
                         depthInput = input()
                         log.info("User Inputted Depth")
                 if depthInput < 0:
-                    console.print(sWarning + " Search Depth Cannot Be Negative")
+                    console.print(
+                        sWarning + " Search Depth Cannot Be Negative")
                     log.warn("User Entered Invalid Depth")
-                    console.print(sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
+                    console.print(
+                        sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
                     depthInput = input()
                     log.info("User Inputted Depth")
                     # depth = depthInput
                 elif depthInput == 0:
                     console.print(sWarning + " Search Depth Cannot Be Zero")
                     log.warn("User Entered Invalid Depth")
-                    console.print(sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
+                    console.print(
+                        sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
                     depthInput = input()
                     log.info("User Inputted Depth")
                     # depth = depthInput
@@ -312,7 +355,8 @@ if __name__ == "__main__":
                         + " To Prevent Crashing The Program, Search Depth Cannot Be Greater Than 200"
                     )
                     log.warn("User Entered Invalid Depth")
-                    console.print(sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
+                    console.print(
+                        sInput + "Enter The Search Depth For Each Url (Max Is 200): ", end="")
                     depthInput = input()
                     log.info("User Inputted Depth")
                     # depth = depthInput
@@ -380,7 +424,8 @@ if __name__ == "__main__":
                     parts = up.urlsplit(url)
                     baseUrl = "{}://{}".format(parts.scheme, parts.netloc)
                     # Formating The Subdomain And Displaying It
-                    path = url[: url.rfind("/") + 1] if "/" in parts.path else url
+                    path = url[: url.rfind(
+                        "/") + 1] if "/" in parts.path else url
                     bn = Text(f"[{count}]")
                     bn.stylize("bold #5bc0de")
                     pText = Text(" Processing: ")
@@ -403,7 +448,8 @@ if __name__ == "__main__":
                         console
                         continue
                     except r.exceptions.ConnectionError as e:
-                        console.print(sDanger + " Connection Error: {}".format(e))
+                        console.print(
+                            sDanger + " Connection Error: {}".format(e))
                         log.error("Connection Error: {}".format(e))
                         log.exception("Connection Error: {}".format(e))
                         eUrl = Text(url)
@@ -421,7 +467,8 @@ if __name__ == "__main__":
                         log.info("Skipping Url: {}".format(eUrl))
                         continue
                     except r.exceptions.TooManyRedirects as e:
-                        console.print(sDanger + " Too Many Redirects: {}".format(e))
+                        console.print(
+                            sDanger + " Too Many Redirects: {}".format(e))
                         log.error("Too Many Redirects: {}".format(e))
                         log.exception("Too Many Redirects: {}".format(e))
                         eUrl = Text(url)
@@ -430,7 +477,8 @@ if __name__ == "__main__":
                         log.info("Skipping Url: {}".format(eUrl))
                         continue
                     except r.exceptions.RequestException as e:
-                        console.print(sDanger + " Request Exception: {}".format(e))
+                        console.print(
+                            sDanger + " Request Exception: {}".format(e))
                         log.error("Request Exception: {}".format(e))
                         log.exception("Request Exception: {}".format(e))
                         eUrl = Text(url)
@@ -449,12 +497,13 @@ if __name__ == "__main__":
                         continue
                     # finding the emails in the html code
                     newEmails = set(
-                        re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", response.text, re.I)
+                        re.findall(
+                            r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", response.text, re.I)
                     )
                     emails.update(newEmails)
                     soup = bs(response.text, features="lxml")
                     # finding the urls in the html code
-                    
+
                     for anchor in soup.find_all("a"):
                         link = anchor.attrs["href"] if "href" in anchor.attrs else ""
                         if link.startswith("/"):
@@ -467,17 +516,24 @@ if __name__ == "__main__":
             #  Now Showing The Time Taken To Collect Emails And Urls
             try:
                 console.print(
-                    sSuccess + " Time Taken To Collect Emails: {} MiliSeconds".format(time.time() - startTimeg)
+                    sSuccess +
+                    " Time Taken To Collect Emails: {} MiliSeconds".format(
+                        time.time() - startTimeg)
                 )
-                log.info("Time Taken To Collect Emails: {}".format(time.time() - startTimeg))
+                log.info("Time Taken To Collect Emails: {}".format(
+                    time.time() - startTimeg))
                 console.print(
-                    sSuccess + " Time Taken To Collect Sub Urls: {} MiliSeconds".format(time.time() - startTimeg)
+                    sSuccess +
+                    " Time Taken To Collect Sub Urls: {} MiliSeconds".format(
+                        time.time() - startTimeg)
                 )
-                log.info("Time Taken To Collect Sub Urls: {}".format(time.time() - startTimeg))
+                log.info("Time Taken To Collect Sub Urls: {}".format(
+                    time.time() - startTimeg))
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The Time Taken\n")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The Time Taken\n")
                 log.info("An Error Ocurred While Printing The Time Taken\n")
             # appending the emails to a list
         for mail in emails:
@@ -498,129 +554,166 @@ if __name__ == "__main__":
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The Emails")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The Emails")
                 log.info("An Error Ocurred While Printing The Emails")
 
             # Saving Emails In A Text File
             try:
                 items = list(range(0, 100))
-                console.print(sInfo + "Saving Scrapped Emails In A Text File(_emails.txt)\n")
+                console.print(
+                    sInfo + "Saving Scrapped Emails In A Text File(_emails.txt)\n")
                 for item in progressBar(items, prefix="Progress:", suffix="Complete", length=90):
                     with open("_emails.txt", "w") as f:
                         for item in emailList:
                             f.write("%s\n" % item)
                     f.close()
                 time.sleep(0.1)
-                console.print(sSuccess + " Scrapped Emails Are Successfully Saved!\n\n")
+                console.print(
+                    sSuccess + " Scrapped Emails Are Successfully Saved!\n\n")
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Saving The Emails")
+                console.print(
+                    sInfo + " An Error Ocurred While Saving The Emails")
                 log.info("An Error Ocurred While Saving The Emails")
 
             # Saving Scrapped Urls In A Text File
             try:
                 items = list(range(0, 100))
-                console.print(sInfo + "Saving Scrapped Urls In A Text File(_scrappedUrls.txt)\n")
+                console.print(
+                    sInfo + "Saving Scrapped Urls In A Text File(_scrappedUrls.txt)\n")
                 for item in progressBar(items, prefix="Progress:", suffix="Complete", length=90):
                     with open("_scrappedUrls.txt", "w") as k:
                         for item in scrappedUrlList:
                             k.write("%s\n" % item)
                     k.close()
                 time.sleep(0.1)
-                console.print(sSuccess + " Scrapped Urls Are Successfully Saved!\n\n")
+                console.print(
+                    sSuccess + " Scrapped Urls Are Successfully Saved!\n\n")
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Saving The Urls")
+                console.print(
+                    sInfo + " An Error Ocurred While Saving The Urls")
                 log.info("An Error Ocurred While Saving The Urls")
 
             # Now Showing How Many Emails And Urls Are Collected
             try:
-                console.print(sSuccess + " Number Of Scrapped Emails: {}".format(emailCount))
+                console.print(
+                    sSuccess + " Number Of Scrapped Emails: {}".format(emailCount))
                 log.info("Number Of Scrapped Emails: {}".format(emailCount))
-                console.print(sSuccess + " Number Of Scrapped Urls: {}".format(len(scrappedUrlList)))
-                log.info("Number Of Scrapped Urls: {}".format(len(scrappedUrlList)))
+                console.print(
+                    sSuccess + " Number Of Scrapped Urls: {}".format(len(scrappedUrlList)))
+                log.info("Number Of Scrapped Urls: {}".format(
+                    len(scrappedUrlList)))
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The Emails And Urls")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The Emails And Urls")
                 log.info("An Error Ocurred While Printing The Emails And Urls")
             #  Now Showing The Time Taken To Collect Emails And Urls
             try:
                 console.print(
-                    sSuccess + " Time Taken To Collect Emails: {} MiliSeconds".format(time.time() - startTime)
+                    sSuccess +
+                    " Time Taken To Collect Emails: {} MiliSeconds".format(
+                        time.time() - startTime)
                 )
-                log.info("Time Taken To Collect Emails: {}".format(time.time() - startTime))
+                log.info("Time Taken To Collect Emails: {}".format(
+                    time.time() - startTime))
                 console.print(
-                    sSuccess + " Time Taken To Collect Sub Urls: {} MiliSeconds".format(time.time() - startTime)
+                    sSuccess +
+                    " Time Taken To Collect Sub Urls: {} MiliSeconds".format(
+                        time.time() - startTime)
                 )
-                log.info("Time Taken To Collect Sub Urls: {}".format(time.time() - startTime))
+                log.info("Time Taken To Collect Sub Urls: {}".format(
+                    time.time() - startTime))
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The Time Taken\n")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The Time Taken\n")
                 log.info("An Error Ocurred While Printing The Time Taken\n")
             # showing How Much system resource is using
             try:
                 console.print(sSuccess + " Current Usage Of System Resource:")
                 log.info("Current Usage Of System Resource:")
-                console.print(sSuccess + " CPU: {}%".format(psutil.cpu_percent()))
+                console.print(
+                    sSuccess + " CPU: {}%".format(psutil.cpu_percent()))
                 log.info("CPU: {}%".format(psutil.cpu_percent()))
-                console.print(sSuccess + " RAM: {}%".format(psutil.virtual_memory()[2]))
+                console.print(
+                    sSuccess + " RAM: {}%".format(psutil.virtual_memory()[2]))
                 log.info("RAM: {}%".format(psutil.virtual_memory()[2]))
-                console.print(sSuccess + " Disk: {}%".format(psutil.disk_usage("/")[3]))
+                console.print(
+                    sSuccess + " Disk: {}%".format(psutil.disk_usage("/")[3]))
                 log.info("Disk: {}%".format(psutil.disk_usage("/")[3]))
-                console.print(sSuccess + " Network: {}%".format(psutil.net_io_counters()[0]))
+                console.print(
+                    sSuccess + " Network: {}%".format(psutil.net_io_counters()[0]))
                 log.info("Network: {}%".format(psutil.net_io_counters()[0]))
-                console.print(sSuccess + " Network Speed: {} kbps".format(psutil.net_io_counters()[1]))
-                log.info("Network Speed: {} kbps".format(psutil.net_io_counters()[1]))
-                
+                console.print(
+                    sSuccess + " Network Speed: {} kbps".format(psutil.net_io_counters()[1]))
+                log.info("Network Speed: {} kbps".format(
+                    psutil.net_io_counters()[1]))
+
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The System Resource Used By The Program\n")
-                log.info("An Error Ocurred While Printing The System Resource Used By The Program\n")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The System Resource Used By The Program\n")
+                log.info(
+                    "An Error Ocurred While Printing The System Resource Used By The Program\n")
             # Showing The os Information
             try:
-                console.print(sSuccess + " OS Information: {}".format(platform.platform()))
+                console.print(
+                    sSuccess + " OS Information: {}".format(platform.platform()))
                 log.info("OS Information: {}".format(platform.platform()))
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The OS Information\n")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The OS Information\n")
                 log.info("An Error Ocurred While Printing The OS Information\n")
             # showing the name of the os
             try:
-                console.print(sSuccess + " OS Name: {}".format(platform.system()))
+                console.print(
+                    sSuccess + " OS Name: {}".format(platform.system()))
                 log.info("OS Name: {}".format(platform.system()))
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The OS Name\n")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The OS Name\n")
                 log.info("An Error Ocurred While Printing The OS Name\n")
             # showing the Current Date And Time in a formal way
             try:
-                console.print(sSuccess + " Current Date And Time: {}".format(datetime.datetime.now()))
+                console.print(
+                    sSuccess + " Current Date And Time: {}".format(datetime.datetime.now()))
                 log.info("Current Date And Time: {}".format(time.ctime()))
             except Exception as e:
                 console.print(sDanger + " Error: {}".format(e))
                 log.error("Error: {}".format(e))
-                console.print(sInfo + " An Error Ocurred While Printing The Current Date And Time\n")
-                log.info("An Error Ocurred While Printing The Current Date And Time\n")
+                console.print(
+                    sInfo + " An Error Ocurred While Printing The Current Date And Time\n")
+                log.info(
+                    "An Error Ocurred While Printing The Current Date And Time\n")
 
-            console.print(sSuccess + " All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
-            log.info("All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
+            console.print(
+                sSuccess + " All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
+            log.info(
+                "All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
 
             console.print(sSuccess + " Thanks For Using MailGrab!")
             console.print(sSuccess + " Made By: " + __author__)
-            console.print(sInfo + " If You Have Any Suggestion Or Bug Please Contact Me At: " + __email__)
+            console.print(
+                sInfo + " If You Have Any Suggestion Or Bug Please Contact Me At: " + __email__)
             cursor.show()
             console.print(sInfo + " Press Any Key To Exit", end="")
             input()
             log.info("Thanks For Using MailGrab!")
             log.info("Program Ended Successfully")
-            log.info("----------------------------------------------------------------------------------------------------------------------")
+            log.info(
+                "----------------------------------------------------------------------------------------------------------------------")
             sys.exit()
         else:
             pass
@@ -661,7 +754,8 @@ if __name__ == "__main__":
                 inputUserUrl = str(input())
                 log.info("User Inputted Url")
             elif " " in inputUserUrl:
-                console.print(sWarning + " You Cannot Use White Spaces As/In Url")
+                console.print(
+                    sWarning + " You Cannot Use White Spaces As/In Url")
                 log.warn("User Entered Invalid Url")
                 console.print(sInput + "Enter The Url To Be Scanned: ", end="")
                 inputUserUrl = str(input())
@@ -673,7 +767,7 @@ if __name__ == "__main__":
             userUrl = "http://" + inputUserUrl
         else:
             userUrl = inputUserUrl
-        
+
         # Taking Input From The User For The Depth Of The Search
         console.print(sInput + "Enter The Depth Of The Search: ", end="")
         depthInput = input()
@@ -685,7 +779,8 @@ if __name__ == "__main__":
                 if type(depthInput) == float:
                     console.print(sWarning + " Input Cannot Be A Float!")
                     log.warn("User Entered Invalid Depth")
-                    console.print(sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
+                    console.print(
+                        sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
                     depthInput = input()
                     log.info("User Inputted Depth")
                 else:
@@ -699,27 +794,31 @@ if __name__ == "__main__":
                 elif not depthInput.isdigit():
                     console.print(sWarning + " Input Must Be A Number!")
                     log.warn("User Entered Invalid Depth")
-                    console.print(sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
+                    console.print(
+                        sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
                     depthInput = input()
                     log.info("User Inputted Depth")
                 # checking the input is digit or not, else continuing while loop
                 else:
                     console.print(sWarning + " Input Must Be A Number!")
                     log.warn("User Entered Invalid Depth")
-                    console.print(sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
+                    console.print(
+                        sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
                     depthInput = input()
                     log.info("User Inputted Depth")
             if depthInput < 0:
                 console.print(sWarning + " Search Depth Cannot Be Negative")
                 log.warn("User Entered Invalid Depth")
-                console.print(sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
+                console.print(
+                    sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
                 depthInput = input()
                 log.info("User Inputted Depth")
                 # depth = depthInput
             elif depthInput == 0:
                 console.print(sWarning + " Search Depth Cannot Be Zero")
                 log.warn("User Entered Invalid Depth")
-                console.print(sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
+                console.print(
+                    sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
                 depthInput = input()
                 log.info("User Inputted Depth")
                 # depth = depthInput
@@ -729,7 +828,8 @@ if __name__ == "__main__":
                     + " To Prevent Crashing The Program, Search Depth Cannot Be Greater Than 500"
                 )
                 log.warn("User Entered Invalid Depth")
-                console.print(sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
+                console.print(
+                    sInput + "Enter The Depth Of The Search (Max Is 500): ", end="")
                 depthInput = input()
                 log.info("User Inputted Depth")
                 # depth = depthInput
@@ -858,7 +958,8 @@ if __name__ == "__main__":
                 continue
             # finding the emails in the html code
             newEmails = set(
-                re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", response.text, re.I)
+                re.findall(
+                    r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", response.text, re.I)
             )
             emails.update(newEmails)
             soup = bs(response.text, features="lxml")
@@ -873,7 +974,8 @@ if __name__ == "__main__":
                     urls.append(link)
 
     except KeyboardInterrupt:
-        console.print(sDanger + " Closing! Because User Interrupted The Program")
+        console.print(
+            sDanger + " Closing! Because User Interrupted The Program")
         log.error("Closing! Because User Interrupted The Program")
         console.print(sInfo + " Keyboard Interrupt Detected")
         log.info("Keyboard Interrupt Detected")
@@ -904,14 +1006,16 @@ if __name__ == "__main__":
     # Saving Emails In A Text File
     try:
         items = list(range(0, 100))
-        console.print(sInfo + "Saving Scrapped Emails In A Text File(_emails.txt)\n")
+        console.print(
+            sInfo + "Saving Scrapped Emails In A Text File(_emails.txt)\n")
         for item in progressBar(items, prefix="Progress:", suffix="Complete", length=90):
             with open("_emails.txt", "w") as f:
                 for item in emailList:
                     f.write("%s\n" % item)
             f.close()
         time.sleep(0.1)
-        console.print(sSuccess + " Scrapped Emails Are Successfully Saved!\n\n")
+        console.print(
+            sSuccess + " Scrapped Emails Are Successfully Saved!\n\n")
     except Exception as e:
         console.print(sDanger + " Error: {}".format(e))
         log.error("Error: {}".format(e))
@@ -921,7 +1025,8 @@ if __name__ == "__main__":
     # Saving Scrapped Urls In A Text File
     try:
         items = list(range(0, 100))
-        console.print(sInfo + "Saving Scrapped Urls In A Text File(_scrappedUrls.txt)\n")
+        console.print(
+            sInfo + "Saving Scrapped Urls In A Text File(_scrappedUrls.txt)\n")
         for item in progressBar(items, prefix="Progress:", suffix="Complete", length=90):
             with open("_scrappedUrls.txt", "w") as k:
                 for item in scrappedUrlList:
@@ -937,29 +1042,39 @@ if __name__ == "__main__":
 
     # Now Showing How Many Emails And Urls Are Collected
     try:
-        console.print(sSuccess + " Number Of Scrapped Emails: {}".format(emailCount))
+        console.print(
+            sSuccess + " Number Of Scrapped Emails: {}".format(emailCount))
         log.info("Number Of Scrapped Emails: {}".format(emailCount))
-        console.print(sSuccess + " Number Of Scrapped Urls: {}".format(len(scrappedUrlList)))
+        console.print(
+            sSuccess + " Number Of Scrapped Urls: {}".format(len(scrappedUrlList)))
         log.info("Number Of Scrapped Urls: {}".format(len(scrappedUrlList)))
     except Exception as e:
         console.print(sDanger + " Error: {}".format(e))
         log.error("Error: {}".format(e))
-        console.print(sInfo + " An Error Ocurred While Printing The Emails And Urls")
+        console.print(
+            sInfo + " An Error Ocurred While Printing The Emails And Urls")
         log.info("An Error Ocurred While Printing The Emails And Urls")
     #  Now Showing The Time Taken To Collect Emails And Urls
     try:
         console.print(
-            sSuccess + " Time Taken To Collect Emails: {} MiliSeconds".format(time.time() - startTime)
+            sSuccess +
+            " Time Taken To Collect Emails: {} MiliSeconds".format(
+                time.time() - startTime)
         )
-        log.info("Time Taken To Collect Emails: {}".format(time.time() - startTime))
+        log.info("Time Taken To Collect Emails: {}".format(
+            time.time() - startTime))
         console.print(
-            sSuccess + " Time Taken To Collect Sub Urls: {} MiliSeconds".format(time.time() - startTime)
+            sSuccess +
+            " Time Taken To Collect Sub Urls: {} MiliSeconds".format(
+                time.time() - startTime)
         )
-        log.info("Time Taken To Collect Sub Urls: {}".format(time.time() - startTime))
+        log.info("Time Taken To Collect Sub Urls: {}".format(
+            time.time() - startTime))
     except Exception as e:
         console.print(sDanger + " Error: {}".format(e))
         log.error("Error: {}".format(e))
-        console.print(sInfo + " An Error Ocurred While Printing The Time Taken\n")
+        console.print(
+            sInfo + " An Error Ocurred While Printing The Time Taken\n")
         log.info("An Error Ocurred While Printing The Time Taken\n")
     # showing How Much system resource is using
     try:
@@ -967,28 +1082,36 @@ if __name__ == "__main__":
         log.info("Current Usage Of System Resource:")
         console.print(sSuccess + " CPU: {}%".format(psutil.cpu_percent()))
         log.info("CPU: {}%".format(psutil.cpu_percent()))
-        console.print(sSuccess + " RAM: {}%".format(psutil.virtual_memory()[2]))
+        console.print(
+            sSuccess + " RAM: {}%".format(psutil.virtual_memory()[2]))
         log.info("RAM: {}%".format(psutil.virtual_memory()[2]))
-        console.print(sSuccess + " Disk: {}%".format(psutil.disk_usage("/")[3]))
+        console.print(
+            sSuccess + " Disk: {}%".format(psutil.disk_usage("/")[3]))
         log.info("Disk: {}%".format(psutil.disk_usage("/")[3]))
-        console.print(sSuccess + " Network: {}%".format(psutil.net_io_counters()[0]))
+        console.print(
+            sSuccess + " Network: {}%".format(psutil.net_io_counters()[0]))
         log.info("Network: {}%".format(psutil.net_io_counters()[0]))
-        console.print(sSuccess + " Network Speed: {} kbps".format(psutil.net_io_counters()[1]))
+        console.print(
+            sSuccess + " Network Speed: {} kbps".format(psutil.net_io_counters()[1]))
         log.info("Network Speed: {} kbps".format(psutil.net_io_counters()[1]))
-        
+
     except Exception as e:
         console.print(sDanger + " Error: {}".format(e))
         log.error("Error: {}".format(e))
-        console.print(sInfo + " An Error Ocurred While Printing The System Resource Used By The Program\n")
-        log.info("An Error Ocurred While Printing The System Resource Used By The Program\n")
+        console.print(
+            sInfo + " An Error Ocurred While Printing The System Resource Used By The Program\n")
+        log.info(
+            "An Error Ocurred While Printing The System Resource Used By The Program\n")
     # Showing The os Information
     try:
-        console.print(sSuccess + " OS Information: {}".format(platform.platform()))
+        console.print(
+            sSuccess + " OS Information: {}".format(platform.platform()))
         log.info("OS Information: {}".format(platform.platform()))
     except Exception as e:
         console.print(sDanger + " Error: {}".format(e))
         log.error("Error: {}".format(e))
-        console.print(sInfo + " An Error Ocurred While Printing The OS Information\n")
+        console.print(
+            sInfo + " An Error Ocurred While Printing The OS Information\n")
         log.info("An Error Ocurred While Printing The OS Information\n")
     # showing the name of the os
     try:
@@ -1001,19 +1124,24 @@ if __name__ == "__main__":
         log.info("An Error Ocurred While Printing The OS Name\n")
     # showing the Current Date And Time in a formal way
     try:
-        console.print(sSuccess + " Current Date And Time: {}".format(datetime.datetime.now()))
+        console.print(
+            sSuccess + " Current Date And Time: {}".format(datetime.datetime.now()))
         log.info("Current Date And Time: {}".format(time.ctime()))
     except Exception as e:
         console.print(sDanger + " Error: {}".format(e))
         log.error("Error: {}".format(e))
-        console.print(sInfo + " An Error Ocurred While Printing The Current Date And Time\n")
+        console.print(
+            sInfo + " An Error Ocurred While Printing The Current Date And Time\n")
         log.info("An Error Ocurred While Printing The Current Date And Time\n")
 
-    console.print(sSuccess + " All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
-    log.info("All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
+    console.print(
+        sSuccess + " All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
+    log.info(
+        "All Scrapped Emails And Urls Are Saved In _emails.txt And _scrappedUrls.txt\n")
     console.print(sSuccess + " Thanks For Using MailGrab!")
     console.print(sSuccess + " Made By: " + __author__)
-    console.print(sInfo + " If You Have Any Suggestion Or Bug Please Contact Me At: " + __email__)
+    console.print(
+        sInfo + " If You Have Any Suggestion Or Bug Please Contact Me At: " + __email__)
     console.print(sInfo + " Press Any Key To Exit", end="")
     input()
     log.info("Thanks For Using MailGrab!")
