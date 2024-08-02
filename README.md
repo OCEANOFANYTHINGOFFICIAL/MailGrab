@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-    <img width="60%" align="center" src="https://oceanofanythingofficial.github.io/MailGrab/thumbnail.png"/>
+    <img width="100%" align="center" src="https://oceanofanythingofficial.github.io/MailGrab/thumbnail.png"/>
     <div align="center">
     <a href="https://www.python.org/downloads/release/python-3912/" title="Go to Python homepage"><img src="https://img.shields.io/badge/Python-3.9-lemonyellow?logo=python&logoColor=white" alt="Made with Python"></a>
       <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/OCEANOFANYTHINGOFFICIAL/MailGrab?style=flat">
@@ -15,12 +15,10 @@
 </p>
 
 <div>
-  <strong>Just Provide Urls, And It Will Harvest Emails From Those Urls. Not Only One Url , It Will Automatically Find _SubUrls_ From Given Url. It Can Also Find Emails From Thousands Of Urls At One Time. Dont Have Time To Copy All Emails? No Worry! It Will Save All Emails And Harvested Urls In Saperate Text Files. Emails Will Be Saved In *`_emails.txt`* And Scrapped Urls Will Be Saved In *`_scrappedUrls.txt`*. You Can Provide A Huge List Of Urls To Be Scanned</strong>
+  <strong>Just Provide URLs, And It Will Harvest Emails From Those Urls. Not Only One URL , It Will Automatically Find _SubURLs_ From Given URL. It Can Also Find Emails From Thousands Of URLs At One Time. Dont Have Time To Copy All Emails? No Worry! It Will Save All Emails And Harvested URLs In Saperate Text Files. Emails Will Be Saved In *`_emails.txt`* And Scrapped URLs Will Be Saved In *`_scrappedUrls.txt`*. You Can Provide A Huge List Of URLs To Be Scanned</strong>
 </div>
 
 
-
-  
 
 ##  requirements
 
@@ -38,17 +36,14 @@
 
 ##  Installation
 
-Clone The Repo From Official Page Of **OCEAN OF ANYTHING** And Change Directory To MailGrab
+Clone The Repo From Official Page Of **OCEAN OF ANYTHING OFFICIAL** And Change Directory To MailGrab
 
 ```
 git clone https://github.com/oceanofanythingofficial/MailGrab
-
 cd MailGrab
 ```
 
 ###  Windows
-
-  
 
 Just Run The `install.bat` File And Wait For The Installation To Complete.
 
@@ -104,7 +99,7 @@ Install Python 3.9 In Linux.
 
   
 
-1. ##### Step1- Install supporting additional packages
+1. ##### Step 1 - Install supporting additional packages
 
 ```
 sudo apt install software-properties-common
@@ -116,7 +111,7 @@ sudo apt install software-properties-common
 
   
 
-2. ##### Step2- Add Deadsnakes Ppa Repository To Install Latest Python 3.9
+2. ##### Step 2 - Add Deadsnakes Ppa Repository To Install Latest Python 3.9
 
 Open Terminal And Enter The Following Command
 
@@ -131,7 +126,7 @@ sudo add-apt-repository ppa:deadsnakes/ppa
   
   
 
-3. ##### Step3- Update Ubuntu/Kali Repository
+3. ##### Step 3 - Update Ubuntu/Kali Repository
 
 ```
 sudo apt update
@@ -144,7 +139,7 @@ sudo apt update
   
   
 
-4. ##### Step4- Install latest Python 3 (Version 3.9.0)
+4. ##### Step 4 - Install latest Python 3 (Version 3.9.0)
 
 ```
 sudo apt install python3.9
@@ -157,7 +152,7 @@ sudo apt install python3.9
   
   
 
-5. ##### Step5- Check python version
+5. ##### Step 5 - Check python version
 
 ```shell
 python --version
@@ -169,7 +164,7 @@ By-default _python3-pip_ is not installed in Ubuntu 20.04 and installing it from
 
   
 
-1. ##### Step1- Install python3-pip package using apt command
+1. ##### Step 1 - Install python3-pip package using apt command
 
 ```
 sudo apt install python3-pip
@@ -182,7 +177,7 @@ sudo apt install python3-pip
   
   
 
-2. ##### Step2- Check python3-pip version
+2. ##### Step 2 - Check python3-pip version
 
   
 
@@ -196,7 +191,7 @@ Here pip version 20.0.2 got installed and we need to **upgrade** it to version 2
   
   
 
-3. ##### Step3- Install **curl** command first.
+3. ##### Step 3 - Install **curl** command first.
 
   
 
@@ -215,7 +210,7 @@ sudo apt install curl
   
   
 
-4. ##### Step4- Download pip from **bootstrap.pypa.io** website
+4. ##### Step 4 - Download pip from **bootstrap.pypa.io** website
 
 Now you need to **download get pip** from bootstrap.pypa.io website using **curl** command as shown in image.
 
@@ -230,7 +225,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
   
   
 
-5. ##### Step5- Upgrade python3-pip version to pip-20.3.3
+5. ##### Step 5- Upgrade python3-pip version to pip-20.3.3
 
   
 
@@ -247,7 +242,7 @@ sudo python3.9 get-pip.py
   
   
 
-6. ##### Step6 (optional)- Add pip3.9 directory to PATH.
+6. ##### Step 6 (optional)- Add pip3.9 directory to PATH.
 
 This can be achieved by editing **/etc/environment** file using your favourite editor. Otherwise, exporting and appending "**PATH**" variable for the local user profile will also do the trick. Make sure you add _~/.local/bin/_ in PATH variable.
 
@@ -262,7 +257,7 @@ export PATH=~/.local/bin/:$PATH
   
   
 
-7. ##### Step7- Check pip version
+7. ##### Step 7 - Check pip version
 
 ```shell
 pip3.9 --version
